@@ -1,0 +1,100 @@
+   /* ==========================================*/
+/* Movil */
+@media (max-width: 767px) {
+   /* Estilos básicos */
+   body {
+       margin: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       height: 100vh;
+       background-color: #000;
+       font-family: Arial, sans-serif;
+       position: relative;
+   }
+
+   /* Contenedor de la cuadrícula */
+   .grid-container {
+       display: grid;
+       grid-template-columns: 1fr; /* Una columna para que los botones se apilen verticalmente */
+       gap: 20px;
+       width: 90%; /* Ajuste para que el contenido quepa mejor en la pantalla */
+       height: 800px;
+   }
+
+   /* Estilo de los botones */
+   .grid-container a {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: #fff;
+       color: black;
+       font-size: 16px; /* Reducir un poco el tamaño de la fuente para pantallas más pequeñas */
+       font-weight: bold;
+       text-decoration: none;
+       border-radius: 10px;
+       box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+       transition: transform 0.2s, box-shadow 0.2s;
+       text-align: center;
+       position: relative;
+       overflow: hidden;
+       padding: 20px; /* Añadir algo de padding para darle un poco de aire a los botones */
+   }
+
+   .grid-container a:hover {
+       transform: scale(1.05);
+       box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+   }
+
+   /* Imagen de fondo del botón */
+   .grid-container a::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-size: cover;
+       background-position: center;
+       opacity: 0.7;
+       transition: opacity 0.3s;
+   }
+
+   /* Especificando las imágenes para cada botón */
+   .grid-container a[href="UILeds.php"]::before {
+       background-image: url('../img/ledsimg.jpg');
+   }
+
+   .grid-container a[href="Dashboard.php"]::before {
+       background-image: url('../img/dashboardimg.jpg');
+   }
+
+   .grid-container a[href="#"]:nth-child(3)::before {
+       background-image: url('option3-icon.png');
+   }
+
+   .grid-container a[href="#"]:nth-child(4)::before {
+       background-image: url('option4-icon.png');
+   }
+
+   /* Botón de Cerrar Sesión */
+   .logout {
+       position: fixed; /* Se cambia a fixed para que esté siempre visible en la pantalla */
+       bottom: 20px;
+       right: 20px;
+       padding: 10px 20px;
+       background-color: red;
+       color: white;
+       font-size: 16px;
+       font-weight: bold;
+       text-decoration: none;
+       border-radius: 10px;
+       transition: transform 0.2s, box-shadow 0.2s;
+       z-index: 1000; /* Para asegurarse de que el botón esté encima de otros elementos */
+   }
+
+   .logout:hover {
+       transform: scale(1.05);
+   }
+}

@@ -71,76 +71,9 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard de Reportes</title>
+    <link rel="stylesheet" href="/css/DashboardPC.css">
+    <link rel="stylesheet" href="/css/DashboardMobile.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-    /* Estilos básicos */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #000;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-    }
-
-    h1, h2 {
-        color: #fff;
-        margin-top:40px;
-    }
-
-    .container {
-        width: 80%;
-        max-width: 1200px; /* Ajusta el ancho máximo si es necesario */
-        margin: 0 auto;
-    }
-
-    .charts-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px; /* Espacio entre los gráficos */
-        width: 100%;
-    }
-
-    canvas {
-        max-width: 800px; /* Ajusta el tamaño máximo si es necesario */
-        max-height: 500px; /* Ajusta el tamaño máximo si es necesario */
-    }
-
-    /* Estilo opcional para pantallas pequeñas */
-    @media (max-width: 768px) {
-        .charts-container {
-            flex-direction: column; /* Apila los gráficos verticalmente en pantallas pequeñas */
-        }
-
-        canvas {
-            max-width: 100%;
-            max-height: 300px;
-        }
-    }
-
-     /* Botón de Cerrar Sesión */
-     .logout {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: red;  
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .logout:hover {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
 <body>
     <div class="container">

@@ -1,0 +1,68 @@
+/* ==========================================*/
+/* Movil */
+@media (max-width: 767px) {
+    /* Estilos básicos */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden; /* Evitar el scroll */
+    }
+
+    h1, h2 {
+        color: #fff;
+        margin-top: 70px; /* Reducir el margen superior */
+        font-size: 24px; /* Ajustar el tamaño de la fuente */
+    }
+
+    .container {
+        width: 100%; /* Usar todo el ancho disponible */
+        max-width: 100%; /* Eliminar el ancho máximo */
+        margin-top: -200px;
+    }
+
+    .charts-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Reducir el espacio entre los gráficos */
+        width: 100%;
+        height: auto;
+    }
+
+    canvas {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 100%; /* Asegura que el gráfico no exceda el ancho del contenedor */
+        height: auto; /* Mantener proporción sin exceder el contenedor */
+        max-height: 100vh; /* Ajustar la altura máxima al tamaño de la ventana */
+    }
+
+    /* Botón de Cerrar Sesión */
+    .logout {
+        position: fixed; /* Mantener el botón siempre visible */
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+    }
+
+    .logout:hover {
+        transform: scale(1.05);
+    }
+}

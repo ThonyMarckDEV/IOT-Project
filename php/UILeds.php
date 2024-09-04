@@ -3,7 +3,7 @@ session_start();
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['user'])) {
-    header("Location: index.php"); // Redirige al inicio de sesión si no hay sesión iniciada
+    header("Location: ../index.php"); // Redirige al inicio de sesión si no hay sesión iniciada
     exit();
 }
 
@@ -14,63 +14,8 @@ if (!isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de LEDs ESP32</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            background-color: #000; /* Fondo negro */
-            color: #fff; /* Texto blanco */
-        }
-        .btn { 
-            border: none; 
-            color: #fff; 
-            padding: 0.5em 1em; 
-            font-size: 1.5em; 
-            text-decoration: none; 
-            margin: 0.5em; 
-            cursor: pointer; 
-        }
-        .btn.on { 
-            background-color: #4CAF50; /* Verde para ON */ 
-        }
-        .btn.off { 
-            background-color: #F44336; /* Rojo para OFF */ 
-        }
-        .led-indicator {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin: 0 auto 1em;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
-        }
-        .led-indicator.on {
-            background-color: #4CAF50; /* Verde cuando está ON */
-            box-shadow: 0 0 100px rgba(76, 175, 80, 1), 0 0 30px rgba(76, 175, 80, 0.7);
-        }
-        .led-indicator.off {
-            background-color: #F44336; /* Rojo cuando está OFF */
-            box-shadow: 0 0 100px rgba(244, 67, 54, 1), 0 0 30px rgba(244, 67, 54, 0.7);
-        }
-
-         /* Botón de Cerrar Sesión */
-         .logout {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: red;  
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .logout:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="/css/UILedsPC.css">
+    <link rel="stylesheet" href="/css/UILedsMobile.css">
     <script>
         async function toggleLED(ledId, action) {
             const response = await fetch(`led_control.php?led=${ledId}&action=${action}`);

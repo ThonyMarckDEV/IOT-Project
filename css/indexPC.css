@@ -1,0 +1,90 @@
+/* ==========================================*/
+/* PC */
+@media (min-width: 991px) {
+
+    /* Estilos básicos */
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        font-family: Arial, sans-serif;
+        color: #fff;
+    }
+
+    /* Contenedor del formulario y título */
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 0 20px; /* Padding para evitar que el contenido quede pegado a los bordes */
+    }
+
+    /* Estilo del título */
+    h2 {
+        margin-bottom: 30px; /* Aumentar el espacio debajo del título */
+        color: #fff;
+        font-size: 36px; /* Aumentar el tamaño del texto */
+    }
+
+    /* Estilo del contenedor del formulario */
+    form {
+        background-color: #111;
+        padding: 40px 60px; /* Aumentar el padding */
+        border-radius: 15px; /* Aumentar el radio de borde */
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.1); /* Aumentar el difuminado de la sombra */
+        width: 400px; /* Aumentar el ancho del formulario */
+        max-width: 100%; /* Asegurarse de que no exceda el ancho del contenedor */
+    }
+
+    /* Estilo de las etiquetas */
+    label {
+        display: block;
+        margin-bottom: 12px; /* Aumentar el margen debajo de las etiquetas */
+        color: #fff;
+        font-size: 18px; /* Aumentar el tamaño del texto */
+    }
+
+    /* Estilo de los campos de entrada */
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 15px; /* Aumentar el padding */
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 10px; /* Aumentar el radio de borde */
+        background-color: #333;
+        color: #fff;
+        font-size: 18px; /* Aumentar el tamaño del texto */
+        box-sizing: border-box;
+        box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Estilo del botón de envío */
+    input[type="submit"] {
+        width: 100%;
+        padding: 15px; /* Aumentar el padding */
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 10px; /* Aumentar el radio de borde */
+        font-size: 18px; /* Aumentar el tamaño del texto */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    /* Efecto hover del botón de envío */
+    input[type="submit"]:hover {
+        background-color: #ddd;
+        transform: scale(1.05);
+    }
+
+}
