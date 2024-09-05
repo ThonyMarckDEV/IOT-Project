@@ -18,7 +18,6 @@ if (isset($_SESSION['user'])) {
     session_unset();
     session_destroy();
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -26,33 +25,10 @@ if (isset($_SESSION['user'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LOGIN</title>
+        <link rel="stylesheet" href="/css/indexPC.css">
         <link rel="stylesheet" href="/css/indexMobile.css">
-        <link rel="stylesheet" href="css/indexPC.css">
     </head>
     <body>
-
-        <Style>
-                    /* Estilos básicos para la notificación */
-         .notification {
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #f44336; /* Rojo para el mensaje de error */
-            color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.5s ease-out;
-        }
-
-        .notification.show {
-            opacity: 1;
-        }
-        </style>
-
        <div id="notification" class="notification">
          <?php
            if (isset($_SESSION['error'])) {
@@ -62,6 +38,8 @@ if (isset($_SESSION['user'])) {
            }
           ?>
         </div>
+
+        <h1>DOMOTICS</h1>
 
         <div class="login-container">
             <h2>Iniciar Sesión</h2>

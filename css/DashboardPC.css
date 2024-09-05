@@ -8,15 +8,26 @@
         background-color: #000;
         color: #fff;
         display: flex;
+        flex-direction: column; /* Apilar los elementos verticalmente */
         justify-content: center;
         align-items: center;
         height: 100vh;
         text-align: center;
+        padding: 20px;
+        overflow: hidden; /* Evitar el scroll */
+        background-image: url('../img/fondo.png'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del fondo */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
     }
 
-    h1, h2 {
+    h1{
         color: #fff;
-        margin-top:40px;
+        margin-top: -100px;
+    }   
+    h2 {
+        color: #fff;
+        margin-top:100px;
     }
 
     .container {

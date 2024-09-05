@@ -1,19 +1,21 @@
    /* ==========================================*/
 /* Movil */
 @media (max-width: 767px) {
-   /* Estilos básicos */
-   body {
-       margin: 0;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-direction: column;
-       height: 100vh;
-       background-color: #000;
-       font-family: Arial, sans-serif;
-       position: relative;
-   }
-
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        font-family: Arial, sans-serif;
+        position: relative;
+        background-image: url('../img/fondo.png'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del fondo */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+    }
+    
    /* Contenedor de la cuadrícula */
    .grid-container {
        display: grid;

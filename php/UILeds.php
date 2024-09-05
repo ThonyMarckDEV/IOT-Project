@@ -14,8 +14,8 @@ if (!isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de LEDs ESP32</title>
-    <link rel="stylesheet" href="/css/UILedsPC.css">
-    <link rel="stylesheet" href="/css/UILedsMobile.css">
+    <link rel="stylesheet" href="../css/UILedsPC.css">
+    <link rel="stylesheet" href="../css/UILedsMobile.css">
     <script>
         async function toggleLED(ledId, action) {
             const response = await fetch(`led_control.php?led=${ledId}&action=${action}`);
