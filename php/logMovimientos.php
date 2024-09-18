@@ -45,13 +45,18 @@ if ($conn->query($sql) === TRUE) {
             $mail->Port = 587;
 
             // Configuración del correo
-            $mail->setFrom('domotics24@gmail.com', 'Domotics 24');
+            $mail->setFrom('domotics24@gmail.com', 'HOMEGUARD');
             $mail->addAddress($correo_destino);  // Dirección del destinatario
+
+            // Adjuntar la imagen
+            $mail->addEmbeddedImage('../img/alerta.jpg', 'alerta'); // Reemplaza con la ruta de tu imagen
 
             // Contenido del correo
             $mail->isHTML(true);  // Establecer formato HTML
             $mail->Subject = 'REPORTE DE MOVIMIENTO!!!!';
-            $mail->Body = "Se ha registrado movimiento con la siguiente información:<br>";
+            // Mensaje con imagen adjunta
+        $mail->Body = '<p><img src="cid:alerta" alt="Decoración" style="display: block; margin: 0 auto;"/></p>'
+        . '<p>' . "Se ha registrado movimiento con la siguiente información:" . '</p>';
             $mail->Body .= "Fecha: $fecha_actual<br>";
             $mail->Body .= "Hora: $hora_actual<br>";
             $mail->AltBody = "Se ha registrado movimiento y se insertó un reporte con la siguiente información:\nFecha: $fecha_actual\nHora: $hora_actual";

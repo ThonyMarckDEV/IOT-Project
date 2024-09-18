@@ -39,8 +39,7 @@ if (isset($_SESSION['user'])) {
           ?>
         </div>
 
-        <h1>DOMOTICS</h1>
-
+        <h1>HOMEGUARD</h1>
         <div class="login-container">
             <h2>Iniciar Sesión</h2>
             <form action="php/login.php" method="POST">
