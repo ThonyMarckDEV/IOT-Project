@@ -194,7 +194,7 @@ $conn->close();
             }
         });
     </script>
-<script>
+<!-- <script>
     // Variables para rastrear la inactividad
     let tiempoInactividad = 0;
     let sesionCerrada = false;  // Bandera para evitar múltiples redirecciones
@@ -248,7 +248,7 @@ $conn->close();
     // Ejecutar la verificación de sesión cada 3 segundos
     setInterval(verificarEstadoUsuario, 3000);
 
-</script>
+</script> -->
     <a href="logout.php" class="logout">Cerrar Sesión</a>
 
 </body>

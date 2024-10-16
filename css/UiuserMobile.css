@@ -65,20 +65,20 @@
 
    /* Especificando las imágenes para cada botón */
    .grid-container a[href="UILeds.php"]::before {
-       background-image: url('../img/ledsimg.jpg');
-   }
+    background-image: url('../img/ledsimg.jpg');
+}
 
-   .grid-container a[href="Dashboard.php"]::before {
-       background-image: url('../img/dashboardimg.jpg');
-   }
+.grid-container a[href="Dashboard.php"]::before {
+    background-image: url('../img/dashboardimg.jpg');
+}
 
-   .grid-container a[href="#"]:nth-child(3)::before {
-       background-image: url('option3-icon.png');
-   }
+.grid-container a[href="uploads.php"]::before {
+    background-image: url('../img/camarafotos.jpg');
+}
 
-   .grid-container a[href="#"]:nth-child(4)::before {
-       background-image: url('option4-icon.png');
-   }
+.grid-container a.stream-link::before {
+    background-image: url('../img/remotecam.jpg');
+}
 
    /* Botón de Cerrar Sesión */
    .logout {

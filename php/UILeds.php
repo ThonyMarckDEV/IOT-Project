@@ -82,7 +82,7 @@ $username = $_SESSION['user'];
         <div id="led2-indicator" class="led-indicator off"></div>
         <button id="led2" class="btn" onclick="toggleLED(2, this.innerText === 'ON' ? 'off' : 'on')">Loading...</button>
     </div>
-    <script>
+    <!-- <script>
     // Variables para rastrear la inactividad
     let tiempoInactividad = 0;
     let sesionCerrada = false;  // Bandera para evitar múltiples redirecciones
@@ -136,7 +136,7 @@ $username = $_SESSION['user'];
     // Ejecutar la verificación de sesión cada 3 segundos
     setInterval(verificarEstadoUsuario, 3000);
 
-</script>
+</script> -->
     <a href="logout.php" class="logout">Cerrar Sesión</a>
 
 </body>

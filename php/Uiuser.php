@@ -10,6 +10,9 @@ if (!isset($_SESSION['user'])) {
 // Incluir la conexión a la base de datos
 include 'conexion.php';
 
+// Leer el enlace desde el archivo donde fue almacenado
+$streamLink = file_get_contents('stream_link.txt');
+
 // Obtener el nombre de usuario de la sesión
 $username = $_SESSION['user'];
 
@@ -24,14 +27,13 @@ $username = $_SESSION['user'];
     <link rel="stylesheet" href="/css/UiuserMobile.css">
 </head>
 <body>
-
-    <div class="grid-container">
-        <a href="UILeds.php"></a>
-        <a href="Dashboard.php"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-    </div>
-    <script>
+<div class="grid-container">
+    <a href="UILeds.php"></a>
+    <a href="Dashboard.php"></a>
+    <a href="uploads.php"></a>
+    <a href="<?php echo $streamLink; ?>" class="stream-link" data-url="<?php echo $streamLink; ?>" target="_blank"></a> <!-- Enlace dinámico -->
+</div>
+    <!-- <script>
     // Variables para rastrear la inactividad
     let tiempoInactividad = 0;
     let sesionCerrada = false;  // Bandera para evitar múltiples redirecciones
@@ -85,7 +87,7 @@ $username = $_SESSION['user'];
     // Ejecutar la verificación de sesión cada 3 segundos
     setInterval(verificarEstadoUsuario, 3000);
 
-</script>
+</script> -->
     <a href="logout.php" class="logout">Cerrar Sesión</a>
 
 </body>

@@ -1,0 +1,73 @@
+/* ==========================================*/
+/* PC */
+@media (min-width: 991px) {
+    /* Estilos básicos */
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+        font-family: Arial, sans-serif;
+        position: relative;
+        background-image: url('../img/fondo.png'); /* Ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el área del fondo */
+        background-position: center; /* Centra la imagen en el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #fff; /* Texto en blanco */
+    }
+
+    /* Contenedor de las imágenes en lista vertical */
+    .image-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .image-list img {
+        width: 100%; /* Imágenes de ancho completo */
+        max-width: 400px; /* Límite de tamaño para pantallas grandes */
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); /* Efecto de sombra sutil */
+    }
+
+    /* Botón minimalista de cerrar sesión */
+    .logout {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .logout:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    @media (min-width: 991px) {
+        body {
+            justify-content: flex-start;
+            padding-top: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+    }
+}
